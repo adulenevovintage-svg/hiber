@@ -1,6 +1,5 @@
 import React from 'react';
 import { 
-  Sparkles, 
   Calendar, 
   GraduationCap, 
   MapPin, 
@@ -11,8 +10,7 @@ import {
   Scissors,
   Smile,
   Leaf,
-  Crown,
-  Star
+  Crown
 } from 'lucide-react';
 import { BRAND_INFO } from '../data/salonData';
 
@@ -54,23 +52,14 @@ export const Hero: React.FC<HeroProps> = ({
         {/* 1. Grand Centerpiece Royal Emblem (First Element at Top) */}
         <div className="flex flex-col items-center justify-center">
           
-          {/* Opulent Emblem with Concentric Gold Rings & Radiance */}
-          <div 
-            className="relative group cursor-pointer" 
-            onClick={() => scrollToSection('about')}
-            title="Hiber Beauty Salon & Academy"
-          >
-            <div className="absolute -inset-3 sm:-inset-5 bg-gradient-to-r from-[#bf953f] via-[#fcf6ba] to-[#aa771c] rounded-full blur-xl opacity-65 group-hover:opacity-95 transition duration-700 animate-pulse" />
-            <div className="relative w-32 h-32 sm:w-44 sm:h-44 md:w-52 md:h-52 lg:w-60 lg:h-60 rounded-full p-1.5 sm:p-2 bg-gradient-to-tr from-[#bf953f] via-[#fcf6ba] to-[#aa771c] shadow-[0_0_60px_rgba(212,175,55,0.45)]">
-              <div className="w-full h-full rounded-full overflow-hidden bg-white p-1 flex items-center justify-center shadow-inner">
-                <img 
-                  src={BRAND_INFO.logoUrl} 
-                  alt="Hiber Beauty Salon & Academy Official Emblem" 
-                  className="w-full h-full object-cover rounded-full transform group-hover:scale-105 transition-transform duration-500"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-            </div>
+          {/* Clean Official Emblem */}
+          <div className="relative w-32 h-32 sm:w-44 sm:h-44 md:w-52 md:h-52 lg:w-60 lg:h-60 rounded-full overflow-hidden select-none">
+            <img 
+              src={BRAND_INFO.logoUrl} 
+              alt="Hiber Beauty Salon & Academy Official Emblem" 
+              className="w-full h-full object-cover scale-115 rounded-full pointer-events-none"
+              referrerPolicy="no-referrer"
+            />
           </div>
 
         </div>
@@ -90,8 +79,7 @@ export const Hero: React.FC<HeroProps> = ({
           </h1>
 
           {/* Location & Sanctuary Tag */}
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#121214]/90 border border-[#d4af37]/40 shadow-sm backdrop-blur-md mt-1">
-            <Sparkles className="w-3 h-3 text-[#d4af37]" />
+          <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-[#121214]/90 border border-[#d4af37]/40 shadow-sm backdrop-blur-md mt-1">
             <span className="text-[10px] sm:text-xs font-semibold text-[#f5f5f0] tracking-[0.2em] uppercase">
               Bahir Dar's Premier Sanctuary & Master Academy
             </span>
@@ -181,7 +169,6 @@ export const Hero: React.FC<HeroProps> = ({
               onClick={onOpenQuiz}
               className="px-3 py-1.5 rounded-full bg-[#141416] border border-[#d4af37]/40 hover:border-[#d4af37] text-xs text-[#d4af37] hover:bg-[#d4af37]/10 transition-all flex items-center gap-1.5 cursor-pointer shadow-xs"
             >
-              <Sparkles className="w-3.5 h-3.5 text-[#d4af37]" />
               Free Hair Diagnosis Quiz
             </button>
 
@@ -199,7 +186,7 @@ export const Hero: React.FC<HeroProps> = ({
           <span className="hidden md:inline text-white/20">•</span>
 
           <span className="flex items-center gap-1.5">
-            <Star className="w-3.5 h-3.5 text-[#d4af37] fill-[#d4af37]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37]" />
             4.9 / 5.0 Rating (850+ Clients)
           </span>
 

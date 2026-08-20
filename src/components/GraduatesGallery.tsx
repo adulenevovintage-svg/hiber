@@ -6,7 +6,6 @@ import {
   X, 
   ArrowRight, 
   MapPin, 
-  Star,
   Award,
   ChevronLeft,
   ChevronRight
@@ -50,49 +49,49 @@ export const GraduatesGallery: React.FC = () => {
   };
 
   return (
-    <section id="gallery" className="py-20 lg:py-28 bg-[#fdfcf9] text-[#1a1a1a] relative overflow-hidden border-b border-[#e5dfd3]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="gallery" className="py-14 sm:py-20 lg:py-28 bg-[#fdfcf9] text-[#1a1a1a] relative overflow-hidden border-b border-[#e5dfd3]">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div className="text-center max-w-3xl mx-auto space-y-3 sm:space-y-4 mb-8 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-white border border-[#d4af37]/40 shadow-sm text-[11px] font-semibold text-[#996515] uppercase tracking-[0.25em] rounded-full">
             <Sparkles className="w-3.5 h-3.5 text-[#996515]" />
             Real Transformations & Graduates
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif-luxury font-bold text-[#18181b] tracking-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-serif-luxury font-bold text-[#18181b] tracking-tight">
             Artistry in Motion: <br />
             <span className="text-[#996515]">Graduates & Salon Masterwork</span>
           </h2>
 
-          <p className="text-base text-[#5c5c58] font-normal leading-relaxed">
+          <p className="text-xs sm:text-base text-[#5c5c58] font-normal leading-relaxed px-2 sm:px-0">
             Witness the elegance of authentic Ethiopian beauty craftsmanship—from joyful academy graduation ceremonies in caps and gowns to flawless bridal glams and precision Shuruba.
           </p>
         </div>
 
         {/* Graduate Success Stories Spotlight */}
-        <div className="mb-20 space-y-6">
+        <div className="mb-10 sm:mb-20 space-y-4 sm:space-y-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <GraduationCap className="w-5 h-5 text-[#996515]" />
-              <h3 className="font-serif-luxury text-xl font-bold text-[#18181b]">
+              <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5 text-[#996515]" />
+              <h3 className="font-serif-luxury text-sm sm:text-xl font-bold text-[#18181b]">
                 Featured Academy Alumni Spotlight
               </h3>
             </div>
-            <span className="text-xs text-[#6b6b66] font-semibold hidden sm:inline uppercase tracking-wider">
+            <span className="text-[10px] sm:text-xs text-[#6b6b66] font-semibold hidden sm:inline uppercase tracking-wider">
               1,200+ Certified Graduates Nationwide
             </span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-2.5 sm:gap-6">
             {GRADUATE_STORIES.map((grad) => (
               <div
                 key={grad.id}
-                className="p-6 bg-white border border-[#e8e2d8] hover:border-[#bfa15f] hover:shadow-xl transition-all rounded-2xl flex flex-col justify-between shadow-sm group"
+                className="p-3 sm:p-6 bg-white border border-[#e8e2d8] hover:border-[#bfa15f] hover:shadow-xl transition-all rounded-xl sm:rounded-2xl flex flex-col justify-between shadow-xs sm:shadow-sm group"
               >
-                <div className="space-y-4">
-                  <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#d4af37] shrink-0 shadow-xs">
+                <div className="space-y-2 sm:space-y-4">
+                  <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-4 text-center sm:text-left">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full overflow-hidden border-2 border-[#d4af37] shrink-0 shadow-xs">
                       <img 
                         src={grad.image} 
                         alt={grad.name} 
@@ -100,32 +99,32 @@ export const GraduatesGallery: React.FC = () => {
                       />
                     </div>
                     <div>
-                      <h4 className="font-serif-luxury font-bold text-base text-[#18181b]">
+                      <h4 className="font-serif-luxury font-bold text-xs sm:text-base text-[#18181b]">
                         {grad.name}
                       </h4>
-                      <p className="text-xs text-[#996515] font-bold">
+                      <p className="text-[10px] sm:text-xs text-[#996515] font-bold">
                         {grad.course}
                       </p>
-                      <span className="text-[10px] text-[#71716e] block mt-0.5 uppercase tracking-wider font-medium">
+                      <span className="text-[9.5px] sm:text-[10px] text-[#71716e] block mt-0.5 uppercase tracking-wider font-medium">
                         Class of {grad.graduationYear}
                       </span>
                     </div>
                   </div>
 
-                  <p className="font-editorial italic text-sm text-[#3b3b38] leading-relaxed">
+                  <p className="font-editorial italic text-[11px] sm:text-sm text-[#3b3b38] leading-tight sm:leading-relaxed line-clamp-3 sm:line-clamp-none">
                     "{grad.quote}"
                   </p>
                 </div>
 
-                <div className="pt-4 mt-4 border-t border-[#f0ebe1] flex items-center justify-between text-xs">
-                  <span className="text-[#5c5c58] flex items-center gap-1 font-medium">
-                    <Award className="w-3.5 h-3.5 text-[#996515]" />
-                    {grad.achievement}
+                <div className="pt-2 sm:pt-4 mt-2 sm:mt-4 border-t border-[#f0ebe1] flex flex-col sm:flex-row sm:items-center justify-between text-[10px] sm:text-xs gap-1">
+                  <span className="text-[#5c5c58] flex items-center gap-1 font-medium truncate">
+                    <Award className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#996515] shrink-0" />
+                    <span className="truncate">{grad.achievement}</span>
                   </span>
                   {grad.salonLocation && (
                     <span className="text-[#996515] font-bold flex items-center gap-1">
-                      <MapPin className="w-3 h-3 text-[#996515]" />
-                      {grad.salonLocation}
+                      <MapPin className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-[#996515] shrink-0" />
+                      <span className="truncate">{grad.salonLocation}</span>
                     </span>
                   )}
                 </div>
@@ -135,12 +134,12 @@ export const GraduatesGallery: React.FC = () => {
         </div>
 
         {/* Gallery Filters */}
-        <div className="flex items-center justify-center flex-wrap gap-2 sm:gap-2.5 mb-10">
+        <div className="flex items-center justify-center flex-wrap gap-1.5 sm:gap-2.5 mb-8 sm:mb-10">
           {filters.map((f) => (
             <button
               key={f.id}
               onClick={() => setActiveFilter(f.id)}
-              className={`px-4 py-2 text-xs uppercase tracking-wider font-semibold transition-all rounded-full cursor-pointer ${
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 text-[10.5px] sm:text-xs uppercase tracking-wider font-semibold transition-all rounded-full cursor-pointer ${
                 activeFilter === f.id
                   ? 'bg-[#18181b] text-[#f5f5f0] shadow-md font-bold'
                   : 'bg-white text-[#6b6b66] border border-[#ded7cc] hover:border-[#996515]/60 hover:text-[#18181b] shadow-xs'
@@ -152,12 +151,12 @@ export const GraduatesGallery: React.FC = () => {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-6">
           {filteredGallery.map((item) => (
             <div
               key={item.id}
               onClick={() => openLightbox(item)}
-              className="group relative overflow-hidden rounded-2xl bg-[#f0ede6] border border-[#e2dcce] hover:border-[#996515] transition-all duration-300 cursor-pointer h-72 sm:h-80 shadow-md hover:shadow-xl"
+              className="group relative overflow-hidden rounded-xl sm:rounded-2xl bg-[#f0ede6] border border-[#e2dcce] hover:border-[#996515] transition-all duration-300 cursor-pointer h-40 sm:h-80 shadow-xs sm:shadow-md hover:shadow-xl"
             >
               <img 
                 src={item.image} 
@@ -169,19 +168,19 @@ export const GraduatesGallery: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
 
               {/* Expand Icon */}
-              <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/70 border border-[#d4af37]/60 flex items-center justify-center text-[#d4af37] opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-xs">
-                <Maximize2 className="w-4 h-4" />
+              <div className="absolute top-2 right-2 sm:top-4 sm:right-4 w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-black/70 border border-[#d4af37]/60 flex items-center justify-center text-[#d4af37] opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-xs">
+                <Maximize2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </div>
 
               {/* Title & Caption */}
-              <div className="absolute bottom-4 left-4 right-4 space-y-1 transform group-hover:-translate-y-1 transition-transform">
-                <span className="text-[10px] uppercase tracking-wider text-[#d4af37] font-bold block">
+              <div className="absolute bottom-2 left-2 right-2 sm:bottom-4 sm:left-4 sm:right-4 space-y-0.5 sm:space-y-1 transform group-hover:-translate-y-1 transition-transform">
+                <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-[#d4af37] font-bold block">
                   {item.category.replace('_', ' ')}
                 </span>
-                <h4 className="font-serif-luxury font-bold text-base text-white">
+                <h4 className="font-serif-luxury font-bold text-xs sm:text-base text-white line-clamp-1">
                   {item.title}
                 </h4>
-                <p className="text-xs text-[#d1d1cc] line-clamp-2 font-light">
+                <p className="text-[10px] sm:text-xs text-[#d1d1cc] line-clamp-1 sm:line-clamp-2 font-light">
                   {item.caption}
                 </p>
               </div>

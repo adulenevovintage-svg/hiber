@@ -42,30 +42,30 @@ export const WhyChooseHiber: React.FC = () => {
         </div>
 
         {/* 6 Pillars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-6 lg:gap-8">
           {WHY_CHOOSE_HIBER.map((pillar, idx) => (
             <div
               key={idx}
-              className="p-6 sm:p-8 bg-white border border-[#e8e2d8] hover:border-[#bfa15f] hover:shadow-xl transition-all duration-300 rounded-2xl shadow-sm flex flex-col justify-between group"
+              className="p-3 sm:p-6 lg:p-8 bg-white border border-[#e8e2d8] hover:border-[#bfa15f] hover:shadow-xl transition-all duration-300 rounded-xl sm:rounded-2xl shadow-xs sm:shadow-sm flex flex-col justify-between group"
             >
-              <div className="space-y-4">
-                <div className="w-12 h-12 rounded-xl bg-[#faf7f0] border border-[#dcd4c5] flex items-center justify-center shadow-xs">
+              <div className="space-y-2 sm:space-y-4">
+                <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-[#faf7f0] border border-[#dcd4c5] flex items-center justify-center shadow-xs">
                   {iconMap[idx]}
                 </div>
 
-                <div className="space-y-2">
-                  <h3 className="font-serif-luxury font-bold text-lg text-[#18181b] group-hover:text-[#996515] transition-colors">
+                <div className="space-y-1 sm:space-y-2">
+                  <h3 className="font-serif-luxury font-bold text-xs sm:text-lg text-[#18181b] group-hover:text-[#996515] transition-colors line-clamp-1 sm:line-clamp-none">
                     {pillar.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#5c5c58] leading-relaxed">
+                  <p className="text-[10.5px] sm:text-sm text-[#5c5c58] leading-tight sm:leading-relaxed line-clamp-3 sm:line-clamp-none">
                     {pillar.description}
                   </p>
                 </div>
               </div>
 
-              <div className="pt-4 mt-4 border-t border-[#f0ebe1] flex items-center gap-2 text-xs text-[#996515] font-bold">
-                <CheckCircle2 className="w-3.5 h-3.5" />
-                <span>Verified Hiber Standard</span>
+              <div className="pt-2 sm:pt-4 mt-2 sm:mt-4 border-t border-[#f0ebe1] flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-[#996515] font-bold">
+                <CheckCircle2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
+                <span className="truncate">Verified Standard</span>
               </div>
             </div>
           ))}
