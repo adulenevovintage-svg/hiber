@@ -14,18 +14,44 @@
   }
 
   body {
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #050505;
     color: #f5f5f0;
+    font-family: 'Didact Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body *, * {
+    font-family: 'Didact Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  /* Exclude ingredients section from Didact Gothic */
+  #botanicals, #botanicals * {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  }
+  
+  /* Restore heading fonts inside botanicals if needed */
+  #botanicals h1, #botanicals h2, #botanicals h3, #botanicals h4 {
+    font-family: 'Bodoni Moda', 'Didot', 'Playfair Display', Georgia, serif !important;
   }
 
   h1, h2, h3, h4, .font-serif-luxury {
-    font-family: 'Cinzel', Georgia, serif;
+    font-family: 'Bodoni Moda', 'Didot', 'Playfair Display', Georgia, serif !important;
   }
 
   .font-quote, .font-editorial {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Playfair Display', 'Bodoni Moda', 'Didot', Georgia, serif !important;
   }
+}
+
+.font-bodoni {
+  font-family: 'Bodoni Moda', Georgia, serif;
+}
+
+.font-didot {
+  font-family: 'Didot', 'Bodoni Moda', Georgia, serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', Georgia, serif;
 }
 
 /* Luxury Metallic Gold Utilities */
