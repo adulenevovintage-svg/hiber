@@ -1,5 +1,17 @@
 export type ServiceCategory = 'all' | 'hair' | 'braiding' | 'coloring' | 'cutting' | 'treatments' | 'makeup' | 'bridal' | 'nails' | 'skincare';
 
+export type SiteSegment = 
+  | 'all'
+  | 'prices'
+  | 'about'
+  | 'hair' 
+  | 'makeup' 
+  | 'botanicals' 
+  | 'bridal' 
+  | 'academy' 
+  | 'gallery' 
+  | 'contact';
+
 export interface ServiceItem {
   id: string;
   name: string;

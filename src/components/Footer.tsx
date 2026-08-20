@@ -6,10 +6,8 @@ import {
   Instagram, 
   Sparkles, 
   GraduationCap, 
-  Award, 
-  Heart,
-  ChevronRight,
-  Send
+  Send,
+  ArrowUp
 } from 'lucide-react';
 import { BRAND_INFO } from '../data/salonData';
 
@@ -19,10 +17,21 @@ interface FooterProps {
 }
 
 export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenQuiz }) => {
+  const scrollToTarget = (targetId: string) => {
+    const el = document.getElementById(targetId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <footer className="bg-[#050505] border-t border-[#d4af37]/25 text-[#a3a39e] relative overflow-hidden">
+    <footer className="bg-[#121214] text-[#d1ceca] relative overflow-hidden border-t border-[#d4af37]/30">
       {/* Background Accent */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-48 bg-[#d4af37]/4 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-48 bg-[#d4af37]/5 rounded-full blur-[140px] pointer-events-none" />
 
       {/* Main Footer Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 relative z-10">
@@ -31,10 +40,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenQuiz }) => 
           {/* Brand Identity & Circular Logo */}
           <div className="lg:col-span-4 space-y-5">
             <div className="flex items-center gap-3.5 sm:gap-4 group">
-              <div className="relative w-12 h-12 sm:w-14 sm:h-14 shrink-0 rounded-full border-2 border-[#d4af37] bg-[#050505] p-0.5 shadow-sm group-hover:border-[#f3e5ab] transition-all duration-300">
-                <div className="w-full h-full rounded-full overflow-hidden bg-[#0e0e10] flex items-center justify-center">
+              <div className="relative w-12 h-12 sm:w-14 sm:h-14 shrink-0 rounded-full border-2 border-[#d4af37] bg-white p-0.5 shadow-sm group-hover:border-[#f3e5ab] transition-all duration-300">
+                <div className="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center">
                   <img 
-                    src="https://cdn.phototourl.com/free/2026-08-20-a9185eaf-ea0f-49bc-822e-833cb3bae4f5.jpg" 
+                    src={BRAND_INFO.logoUrl} 
                     alt="Hiber Beauty Salon & Academy Official Logo" 
                     className="w-full h-full object-cover rounded-full transform transition-transform duration-500 ease-out group-hover:scale-110"
                     referrerPolicy="no-referrer"
@@ -53,10 +62,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenQuiz }) => 
             </div>
 
             <p className="text-xs sm:text-sm text-[#a3a39e] leading-relaxed font-light">
-              Bahir Dar's premier destination for luxury hair styling, authentic botanical hair regrowth therapies, imperial bridal artistry, and accredited professional beauty academy diplomas.
+              Bahir Dar's premier sanctuary for luxury hair styling, authentic botanical scalp therapies, imperial bridal artistry, and accredited vocational beauty diplomas.
             </p>
 
-            {/* Social Media Channels Prominently Highlighted */}
+            {/* Social Media Channels */}
             <div className="space-y-2 pt-2">
               <span className="text-[11px] font-bold uppercase tracking-wider text-[#f5f5f0] block">
                 Official Social Media Channels:
@@ -67,14 +76,30 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenQuiz }) => 
                 href="https://instagram.com" 
                 target="_blank" 
                 rel="noreferrer"
-                className="flex items-center gap-2.5 p-2.5 bg-[#0e0e10] border border-white/10 hover:border-[#d4af37] text-xs text-[#e8e8e2] hover:text-[#d4af37] transition-all group"
+                className="flex items-center gap-2.5 p-2.5 bg-[#1a1a1d] border border-white/10 hover:border-[#d4af37] text-xs text-[#e8e8e2] hover:text-[#d4af37] transition-all rounded-xl group"
               >
-                <div className="w-7 h-7 bg-gradient-to-tr from-[#f59e0b] to-[#ec4899] flex items-center justify-center text-white shrink-0">
+                <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] flex items-center justify-center text-white shrink-0 shadow-xs">
                   <Instagram className="w-4 h-4" />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[10px] text-[#71716e]">Instagram</span>
-                  <span className="font-semibold">{BRAND_INFO.instagram}</span>
+                  <span className="font-semibold text-[11px] leading-tight">Instagram @hiber_salon_bahirdar</span>
+                  <span className="text-[10px] text-[#8c8c88]">Daily Bridal Transformations & Clips</span>
+                </div>
+              </a>
+
+              {/* Telegram */}
+              <a 
+                href="https://t.me" 
+                target="_blank" 
+                rel="noreferrer"
+                className="flex items-center gap-2.5 p-2.5 bg-[#1a1a1d] border border-white/10 hover:border-[#d4af37] text-xs text-[#e8e8e2] hover:text-[#d4af37] transition-all rounded-xl group"
+              >
+                <div className="w-7 h-7 rounded-lg bg-[#229ED9] flex items-center justify-center text-white shrink-0 shadow-xs">
+                  <Send className="w-4 h-4" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-semibold text-[11px] leading-tight">Telegram @hiberbeautyacademy</span>
+                  <span className="text-[10px] text-[#8c8c88]">Academy Admissions & Registration</span>
                 </div>
               </a>
 
@@ -83,14 +108,14 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenQuiz }) => 
                 href="https://tiktok.com" 
                 target="_blank" 
                 rel="noreferrer"
-                className="flex items-center gap-2.5 p-2.5 bg-[#0e0e10] border border-white/10 hover:border-[#d4af37] text-xs text-[#e8e8e2] hover:text-[#d4af37] transition-all group"
+                className="flex items-center gap-2.5 p-2.5 bg-[#1a1a1d] border border-white/10 hover:border-[#d4af37] text-xs text-[#e8e8e2] hover:text-[#d4af37] transition-all rounded-xl group"
               >
-                <div className="w-7 h-7 bg-[#000000] border border-white/20 flex items-center justify-center text-white shrink-0 font-bold text-xs">
-                  TT
+                <div className="w-7 h-7 rounded-lg bg-[#000000] border border-white/20 flex items-center justify-center text-white shrink-0 shadow-xs">
+                  <span className="font-bold text-xs tracking-tighter">TT</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[10px] text-[#71716e]">TikTok</span>
-                  <span className="font-semibold">{BRAND_INFO.tiktok}</span>
+                  <span className="font-semibold text-[11px] leading-tight">TikTok @hiberbeautysalon</span>
+                  <span className="text-[10px] text-[#8c8c88]">Tutorials, Silk Presses & Shuruba</span>
                 </div>
               </a>
             </div>
@@ -102,13 +127,41 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenQuiz }) => 
               Salon Services
             </h4>
             <ul className="space-y-2 text-xs">
-              <li><a href="#hair-services" className="hover:text-[#d4af37] transition-colors">Braiding & Shuruba</a></li>
-              <li><a href="#hair-services" className="hover:text-[#d4af37] transition-colors">Silk Press & Styling</a></li>
-              <li><a href="#makeup-services" className="hover:text-[#d4af37] transition-colors">Bridal Melse Glam</a></li>
-              <li><a href="#makeup-services" className="hover:text-[#d4af37] transition-colors">Gel & Acrylic Nails</a></li>
-              <li><a href="#botanicals" className="hover:text-[#d4af37] transition-colors">14 Botanical Super-Oils</a></li>
-              <li><a href="#hair-growth" className="hover:text-[#d4af37] transition-colors">Edge Regrowth Steam</a></li>
-              <li><a href="#bridal-packages" className="hover:text-[#d4af37] transition-colors">Luxury Packages</a></li>
+              <li>
+                <button onClick={() => scrollToTarget('hair-services')} className="hover:text-[#d4af37] transition-colors cursor-pointer text-left">
+                  Braiding & Shuruba
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToTarget('hair-services')} className="hover:text-[#d4af37] transition-colors cursor-pointer text-left">
+                  Silk Press & Styling
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToTarget('makeup-services')} className="hover:text-[#d4af37] transition-colors cursor-pointer text-left">
+                  Bridal Melse Glam
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToTarget('makeup-services')} className="hover:text-[#d4af37] transition-colors cursor-pointer text-left">
+                  Gel & Acrylic Nails
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToTarget('botanicals')} className="hover:text-[#d4af37] transition-colors cursor-pointer text-left">
+                  14 Botanical Super-Oils
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToTarget('bridal-packages')} className="hover:text-[#d4af37] transition-colors cursor-pointer text-left">
+                  VIP Bridal Packages
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToTarget('price-explorer')} className="hover:text-[#d4af37] transition-colors cursor-pointer text-left text-[#d4af37] font-semibold">
+                  Complete Price Guide
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -119,82 +172,115 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenQuiz }) => 
               Beauty Academy
             </h4>
             <ul className="space-y-2 text-xs">
-              <li><a href="#academy" className="hover:text-[#d4af37] transition-colors">Master Makeup Artistry (3 Mos)</a></li>
-              <li><a href="#academy" className="hover:text-[#d4af37] transition-colors">Master Hairstyling & Cuts (4 Mos)</a></li>
-              <li><a href="#academy" className="hover:text-[#d4af37] transition-colors">Traditional Braiding & Shuruba</a></li>
-              <li><a href="#academy" className="hover:text-[#d4af37] transition-colors">Natural Product Formulation</a></li>
-              <li><a href="#academy" className="hover:text-[#d4af37] transition-colors">Nail Technology & Esthetics</a></li>
-              <li><a href="#academy" className="hover:text-[#d4af37] transition-colors">Summer Intensive Bootcamps</a></li>
-              <li><a href="#gallery" className="hover:text-[#d4af37] transition-colors">Graduate Ceremony Showcase</a></li>
+              <li>
+                <button onClick={() => scrollToTarget('academy')} className="hover:text-[#d4af37] transition-colors cursor-pointer text-left">
+                  Master Makeup Artistry (3 Mos)
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToTarget('academy')} className="hover:text-[#d4af37] transition-colors cursor-pointer text-left">
+                  Master Hairstyling & Cuts (4 Mos)
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToTarget('academy')} className="hover:text-[#d4af37] transition-colors cursor-pointer text-left">
+                  Traditional Braiding & Shuruba
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToTarget('academy')} className="hover:text-[#d4af37] transition-colors cursor-pointer text-left">
+                  Natural Formulation & Scalp Care
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToTarget('academy')} className="hover:text-[#d4af37] transition-colors cursor-pointer text-left">
+                  Nail Technology & Esthetics
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToTarget('academy')} className="hover:text-[#d4af37] transition-colors cursor-pointer text-left">
+                  Summer Intensive Bootcamps
+                </button>
+              </li>
             </ul>
           </div>
 
           {/* Direct Contacts & Location Column */}
           <div className="lg:col-span-3 space-y-4">
             <h4 className="font-serif-luxury font-bold text-sm text-[#f5f5f0] uppercase tracking-wider">
-              Bahir Dar Location & Contacts
+              Visit Sanctuary & Salon
             </h4>
             
             <div className="space-y-3 text-xs">
-              {/* Address */}
-              <div className="flex items-start gap-2.5">
+              <div className="flex items-start gap-2 text-[#a3a39e]">
                 <MapPin className="w-4 h-4 text-[#d4af37] shrink-0 mt-0.5" />
-                <span className="text-[#e8e8e2] leading-relaxed">
-                  {BRAND_INFO.location}
-                </span>
+                <span>{BRAND_INFO.location}</span>
               </div>
 
-              {/* Phones Prominently Listed */}
-              <div className="p-3 bg-[#0e0e10] border border-[#d4af37]/40 space-y-1.5">
-                <span className="text-[10px] uppercase font-bold text-[#d4af37] tracking-wider block">
-                  Official Hotline Contacts
+              <div className="flex items-center gap-2 text-[#a3a39e]">
+                <Clock className="w-4 h-4 text-[#d4af37] shrink-0" />
+                <span>{BRAND_INFO.hours}</span>
+              </div>
+
+              <div className="pt-2 space-y-1.5">
+                <span className="text-[11px] font-bold text-[#f5f5f0] uppercase tracking-wider block">
+                  Direct Hotlines:
                 </span>
-                <div className="flex items-center gap-2">
-                  <Phone className="w-3.5 h-3.5 text-[#d4af37]" />
-                  <a href={`tel:${BRAND_INFO.phone1}`} className="font-bold text-[#f5f5f0] hover:text-[#d4af37] text-sm">
+                <div className="flex flex-col gap-1">
+                  <a 
+                    href={`tel:${BRAND_INFO.phone1}`} 
+                    className="flex items-center gap-2 text-[#d4af37] font-semibold text-sm hover:underline"
+                  >
+                    <Phone className="w-3.5 h-3.5" />
                     {BRAND_INFO.phone1}
                   </a>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Phone className="w-3.5 h-3.5 text-[#d4af37]" />
-                  <a href={`tel:${BRAND_INFO.phone2}`} className="font-bold text-[#f5f5f0] hover:text-[#d4af37] text-sm">
+                  <a 
+                    href={`tel:${BRAND_INFO.phone2}`} 
+                    className="flex items-center gap-2 text-[#d4af37] font-semibold text-sm hover:underline"
+                  >
+                    <Phone className="w-3.5 h-3.5" />
                     {BRAND_INFO.phone2}
                   </a>
                 </div>
               </div>
 
-              {/* Hours */}
-              <div className="flex items-center gap-2 text-[#a3a39e]">
-                <Clock className="w-4 h-4 text-[#d4af37] shrink-0" />
-                <span>{BRAND_INFO.hours}</span>
+              <div className="pt-2">
+                <button
+                  onClick={() => onOpenBooking('salon')}
+                  className="w-full py-2.5 px-4 rounded-xl text-xs font-bold uppercase tracking-[0.14em] text-[#050505] bg-[#d4af37] hover:bg-[#e5c358] transition-all flex items-center justify-center gap-2 shadow-sm cursor-pointer"
+                >
+                  <Sparkles className="w-3.5 h-3.5" />
+                  Book Appointment Now
+                </button>
               </div>
             </div>
-
-            {/* Quick Action Button */}
-            <div className="pt-2">
-              <button
-                onClick={() => onOpenBooking('salon')}
-                className="w-full py-2.5 text-xs font-bold uppercase tracking-wider text-[#050505] bg-[#d4af37] hover:brightness-110 shadow-md cursor-pointer transition-all"
-              >
-                Book Appointment Online
-              </button>
-            </div>
-
           </div>
 
         </div>
 
-        {/* Bottom Bar: Copyright & Accreditation */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#71716e]">
-          <p>© {new Date().getFullYear()} HIBER BEAUTY SALON & ACADEMY. All rights reserved. Bahir Dar, Ethiopia.</p>
-          <div className="flex items-center gap-4">
-            <span className="flex items-center gap-1 text-[#d4af37]">
-              <Award className="w-3.5 h-3.5" />
-              Government-Accredited Academy
-            </span>
+        {/* Bottom Rights Notice */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#8c8c88]">
+          <p>© {new Date().getFullYear()} Hiber Beauty Salon & Academy. All Rights Reserved. Bahir Dar, Ethiopia.</p>
+          <div className="flex items-center gap-4 text-[11px]">
+            <button onClick={() => onOpenQuiz()} className="hover:text-[#d4af37] transition-colors cursor-pointer">
+              Hair Quiz
+            </button>
             <span>•</span>
-            <button onClick={onOpenQuiz} className="hover:text-[#d4af37] cursor-pointer">
-              Hair Diagnosis
+            <button onClick={() => scrollToTarget('price-explorer')} className="hover:text-[#d4af37] transition-colors cursor-pointer">
+              Price Guide
+            </button>
+            <span>•</span>
+            <button onClick={() => scrollToTarget('contact-location')} className="hover:text-[#d4af37] transition-colors cursor-pointer">
+              Contact & Map
+            </button>
+            <span>•</span>
+            <button 
+              onClick={scrollToTop} 
+              className="hover:text-[#d4af37] transition-colors cursor-pointer flex items-center gap-1 font-bold text-[#d4af37]"
+              title="Back to Top of Page"
+            >
+              <ArrowUp className="w-3.5 h-3.5" />
+              <span>Back to Top</span>
             </button>
           </div>
         </div>

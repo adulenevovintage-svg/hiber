@@ -43,7 +43,7 @@ export const HAIR_SERVICES: ServiceItem[] = [
     description: "Authentic intricate traditional Ethiopian Shuruba, stitch braids, knotless goddess braids, and Fulani art with crisp partings and zero scalp tension.",
     features: ["Natural Nug & Rosemary scalp prep", "Knotless lightweight technique", "Beads & gold thread embellishments", "Long-lasting neat edge finish"],
     popular: true,
-    image: "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=800&q=80"
+    image: "https://cdn.phototourl.com/member/2026-08-20-84c192eb-7730-4bc0-abf6-9bcbb136d772.jpg"
   },
   {
     id: "hair-styling-silk",
@@ -54,7 +54,7 @@ export const HAIR_SERVICES: ServiceItem[] = [
     description: "Deep clarifying wash, custom hydration steam, heat-shield botanical oil infusion, and ultra-silky flat iron polish preserving natural curl bounce.",
     features: ["Deep steam moisture infusion", "Anti-humidity thermal seal", "Zero chemical alteration", "Lustrous featherweight bounce"],
     popular: true,
-    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+    image: "https://cdn.phototourl.com/member/2026-08-20-2946202d-f8d1-4eb6-b260-501fb43b71cb.jpg"
   },
   {
     id: "hair-coloring-balayage",
@@ -74,7 +74,7 @@ export const HAIR_SERVICES: ServiceItem[] = [
     duration: "45 mins",
     description: "Expert face-framing layers, modern bob cuts, split-end micro-dusting, and curl-by-curl shaping for optimal volume and silhouette.",
     features: ["Custom face shape analysis", "Dead ends elimination", "Volumizing blowout", "Texturizing finish"],
-    image: "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=80"
+    image: "https://cdn.phototourl.com/member/2026-08-20-4e17a6e4-8c84-4ffe-ad98-5109deca6cd7.jpg"
   },
   {
     id: "hair-curling-perm",
@@ -105,7 +105,7 @@ export const HAIR_SERVICES: ServiceItem[] = [
     duration: "2.5 - 4 hrs",
     description: "Premium human hair installations including lace melt, closure sew-ins, tape-ins, micro-links, and custom wig styling & maintenance.",
     features: ["Undetectable HD lace melting", "Secure flat foundation", "Natural hair protection", "Custom styling included"],
-    image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80"
+    image: "https://cdn.phototourl.com/member/2026-08-20-84c192eb-7730-4bc0-abf6-9bcbb136d772.jpg"
   },
   {
     id: "hair-special-scalp",
@@ -129,7 +129,7 @@ export const MAKEUP_BEAUTY_SERVICES: ServiceItem[] = [
     description: "Full ceremonial makeup tailored for traditional Habesha Kemis, Melse gold crown ensembles, and white wedding gowns with 24hr waterproof wear.",
     features: ["HD Airbrush / flawless skin finish", "Luxury mink lashes included", "Crown & jewelry placement", "Touch-up emergency kit"],
     popular: true,
-    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80"
+    image: "https://cdn.phototourl.com/member/2026-08-20-e1c3f2b1-613c-434e-8c5a-db9ab93b2490.jpg"
   },
   {
     id: "makeup-soft-glam",
@@ -213,16 +213,17 @@ export const BOTANICAL_INGREDIENTS: BotanicalIngredient[] = [
     badge: "Strength Champion"
   },
   {
-    id: "rosemary",
-    name: "Fresh Rosemary Infusion",
-    amharicName: "የስጋ መጥበሻ (Rosemary)",
-    iconType: "sparkles",
-    keyNutrients: "Carnasic Acid, Rosmarinic Acid, Antioxidants",
-    targetConcerns: ["Slow Hair Growth", "Itchy Scalp", "Dandruff"],
-    description: "Fresh highland rosemary steam-distilled to revitalize dormant follicles and naturally balance scalp sebum without heavy residue.",
-    howWeUseIt: "Concentrated herbal hydrosol mist and scalp massage serum",
-    hairBenefit: "Clinically proven to accelerate new growth speed and soothe scalp itching",
-    image: "https://images.unsplash.com/photo-1515586000433-a5ac74c89978?auto=format&fit=crop&w=600&q=80"
+    id: "aloe-vera",
+    name: "Raw Aloe Vera Gel",
+    amharicName: "ሬት (Eret / Aloe)",
+    iconType: "droplets",
+    keyNutrients: "Proteolytic Enzymes, Polysaccharides, 20 Minerals",
+    targetConcerns: ["Irritated Scalp", "Sun Damage", "Excess Oil"],
+    description: "Freshly sliced succulent gel that heals dead skin cells on the scalp, balances natural pH (4.5–5.5), and creates an anti-frizz moisture barrier.",
+    howWeUseIt: "Pre-shampoo clarifying scalp treatment and leave-in hydration base",
+    hairBenefit: "Cools scalp redness instantly, balances pH, and seals intense moisture into curls",
+    image: "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?auto=format&fit=crop&w=600&q=80",
+    badge: "Deep Hydration"
   },
   {
     id: "avocado",
@@ -261,16 +262,16 @@ export const BOTANICAL_INGREDIENTS: BotanicalIngredient[] = [
     image: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?auto=format&fit=crop&w=600&q=80"
   },
   {
-    id: "aloe-vera",
-    name: "Raw Aloe Vera Gel",
-    amharicName: "ሬት (Eret / Aloe)",
-    iconType: "droplets",
-    keyNutrients: "Proteolytic Enzymes, Polysaccharides, 20 Minerals",
-    targetConcerns: ["Irritated Scalp", "Sun Damage", "Excess Oil"],
-    description: "Freshly sliced succulent gel that heals dead skin cells on the scalp, balances natural pH (4.5–5.5), and creates an anti-frizz moisture barrier.",
-    howWeUseIt: "Pre-shampoo clarifying scalp treatment and leave-in hydration base",
-    hairBenefit: "Cools scalp redness instantly and seals moisture into thirsty curl patterns",
-    image: "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?auto=format&fit=crop&w=600&q=80"
+    id: "rosemary",
+    name: "Fresh Rosemary Infusion",
+    amharicName: "የስጋ መጥበሻ (Rosemary)",
+    iconType: "sparkles",
+    keyNutrients: "Carnasic Acid, Rosmarinic Acid, Antioxidants",
+    targetConcerns: ["Slow Hair Growth", "Itchy Scalp", "Dandruff"],
+    description: "Fresh highland rosemary steam-distilled to revitalize dormant follicles and naturally balance scalp sebum without heavy residue.",
+    howWeUseIt: "Concentrated herbal hydrosol mist and scalp massage serum",
+    hairBenefit: "Clinically proven to accelerate new growth speed and soothe scalp itching",
+    image: "https://images.unsplash.com/photo-1515586000433-a5ac74c89978?auto=format&fit=crop&w=600&q=80"
   },
   {
     id: "onion",
@@ -385,7 +386,7 @@ export const ACADEMY_COURSES: AcademyCourse[] = [
     ],
     certification: "Accredited Master Makeup Artist Diploma",
     popular: true,
-    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80"
+    image: "https://cdn.phototourl.com/member/2026-08-20-8057f53c-a693-4488-a9a3-c882bb02a3b3.jpg"
   },
   {
     id: "course-hair-styling",

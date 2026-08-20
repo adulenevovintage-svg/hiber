@@ -107,25 +107,22 @@ export const HairGrowthTherapies: React.FC<HairGrowthTherapiesProps> = ({ onOpen
   ];
 
   return (
-    <section id="hair-growth" className="py-20 lg:py-28 bg-[#080808] relative overflow-hidden">
-      {/* Glow Effects */}
-      <div className="absolute top-1/3 left-0 w-96 h-96 bg-[#d4af37]/4 rounded-full blur-[140px] pointer-events-none" />
-
+    <section id="hair-growth" className="py-20 lg:py-28 bg-[#fdfcf9] text-[#19241d] relative overflow-hidden border-b border-[#e5dfd3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#0e0e10] border border-[#d4af37]/30 text-[11px] font-semibold text-[#d4af37] uppercase tracking-[0.25em]">
-            <HeartPulse className="w-3.5 h-3.5 text-[#d4af37]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-white border border-[#2d5a3f]/30 shadow-sm text-[11px] font-semibold text-[#235338] uppercase tracking-[0.25em] rounded-full">
+            <HeartPulse className="w-3.5 h-3.5 text-[#2d5a3f]" />
             Clinical Trichology & Organic Health
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif-luxury font-bold text-[#f5f5f0] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif-luxury font-bold text-[#18261e] tracking-tight">
             Hair-Growth, Health & <br />
-            <span className="gold-gradient-text">Strengthening Therapies</span>
+            <span className="text-[#996515]">Strengthening Therapies</span>
           </h2>
 
-          <p className="text-base text-[#a3a39e] font-light leading-relaxed">
+          <p className="text-base text-[#526458] font-normal leading-relaxed">
             Stop hair breakage and reverse edge loss. Our evidence-based organic hair wellness protocols combine ancestral Ethiopian botanicals with modern ozone steam and scalp stimulation.
           </p>
         </div>
@@ -135,7 +132,7 @@ export const HairGrowthTherapies: React.FC<HairGrowthTherapiesProps> = ({ onOpen
           
           {/* Left Column: Protocol Tabs */}
           <div className="lg:col-span-5 space-y-3">
-            <span className="text-[11px] uppercase tracking-[0.2em] text-[#a3a39e] font-semibold block mb-2">
+            <span className="text-[11px] uppercase tracking-[0.2em] text-[#6b7c71] font-bold block mb-2">
               Select a Specialized Treatment Protocol:
             </span>
             
@@ -143,26 +140,26 @@ export const HairGrowthTherapies: React.FC<HairGrowthTherapiesProps> = ({ onOpen
               <div
                 key={p.id}
                 onClick={() => setActiveProtocol(index)}
-                className={`p-4 border transition-all cursor-pointer flex items-center justify-between ${
+                className={`p-4 border transition-all cursor-pointer flex items-center justify-between rounded-xl ${
                   activeProtocol === index
-                    ? 'bg-[#0e0e10] border-[#d4af37] shadow-[0_0_20px_rgba(212,175,55,0.15)]'
-                    : 'bg-[#080808] border-white/10 hover:border-white/20'
+                    ? 'bg-white border-[#2d5a3f] shadow-md ring-2 ring-[#2d5a3f]/20'
+                    : 'bg-white/80 border-[#e1dad0] hover:border-[#b4c7b8] shadow-2xs'
                 }`}
               >
                 <div className="space-y-1">
-                  <h4 className={`text-sm font-bold ${activeProtocol === index ? 'text-[#d4af37]' : 'text-[#f5f5f0]'}`}>
+                  <h4 className={`text-sm font-bold ${activeProtocol === index ? 'text-[#1e4830]' : 'text-[#18261e]'}`}>
                     {p.title}
                   </h4>
-                  <p className="text-xs text-[#a3a39e] line-clamp-1 font-light">
+                  <p className="text-xs text-[#5f7366] line-clamp-1 font-normal">
                     {p.tagline}
                   </p>
                 </div>
 
                 <div className="text-right shrink-0 ml-3">
-                  <span className="text-xs font-bold text-[#d4af37] block">
+                  <span className="text-xs font-bold text-[#996515] block">
                     {p.price}
                   </span>
-                  <span className="text-[10px] text-[#71716e]">
+                  <span className="text-[10px] text-[#788a7e]">
                     {p.duration}
                   </span>
                 </div>
@@ -171,61 +168,61 @@ export const HairGrowthTherapies: React.FC<HairGrowthTherapiesProps> = ({ onOpen
           </div>
 
           {/* Right Column: Active Protocol Deep Details */}
-          <div className="lg:col-span-7 bg-[#0e0e10] border border-[#d4af37]/40 p-6 sm:p-8 flex flex-col justify-between shadow-2xl">
+          <div className="lg:col-span-7 bg-white border border-[#d6dfd4] p-6 sm:p-8 flex flex-col justify-between shadow-lg rounded-2xl">
             <div className="space-y-6">
               
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-white/10">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-[#edf2ec]">
                 <div>
-                  <span className="text-[11px] font-semibold text-[#d4af37] uppercase tracking-[0.2em]">
+                  <span className="text-[11px] font-bold text-[#2d5a3f] uppercase tracking-[0.2em]">
                     Protocol #{activeProtocol + 1}
                   </span>
-                  <h3 className="text-2xl font-serif-luxury font-bold text-[#f5f5f0] mt-0.5">
+                  <h3 className="text-2xl font-serif-luxury font-bold text-[#18261e] mt-0.5">
                     {protocols[activeProtocol].title}
                   </h3>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="px-3 py-1 bg-[#050505] border border-[#d4af37]/30 text-xs font-bold text-[#d4af37]">
+                  <span className="px-3 py-1 bg-[#f4f7f2] border border-[#2d5a3f]/30 text-xs font-bold text-[#1e4830] rounded-md">
                     {protocols[activeProtocol].price}
                   </span>
-                  <span className="text-xs text-[#a3a39e] flex items-center gap-1">
-                    <Clock className="w-3.5 h-3.5 text-[#d4af37]" />
+                  <span className="text-xs text-[#526458] flex items-center gap-1">
+                    <Clock className="w-3.5 h-3.5 text-[#2d5a3f]" />
                     {protocols[activeProtocol].duration}
                   </span>
                 </div>
               </div>
 
-              <p className="text-sm text-[#e8e8e2] leading-relaxed font-light">
+              <p className="text-sm text-[#3b4c41] leading-relaxed">
                 {protocols[activeProtocol].description}
               </p>
 
               <div className="space-y-3">
-                <h5 className="text-xs font-bold text-[#d4af37] uppercase tracking-wider">
+                <h5 className="text-xs font-bold text-[#1e4830] uppercase tracking-wider">
                   Proven Clinical & Botanical Benefits:
                 </h5>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {protocols[activeProtocol].benefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-start gap-2 text-xs text-[#e8e8e2] p-2.5 bg-[#141416] border border-white/10">
-                      <CheckCircle2 className="w-4 h-4 text-[#d4af37] shrink-0 mt-0.5" />
+                    <div key={idx} className="flex items-start gap-2 text-xs text-[#26372d] p-2.5 bg-[#f6f9f5] border border-[#e1ebe0] rounded-lg">
+                      <CheckCircle2 className="w-4 h-4 text-[#2d5a3f] shrink-0 mt-0.5" />
                       <span>{benefit}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="p-3 bg-[#050505] border border-[#d4af37]/30 text-xs text-[#e8e8e2] flex items-center justify-between">
-                <span className="font-semibold text-[#d4af37]">Recommended Plan:</span>
-                <span className="text-[#a3a39e]">{protocols[activeProtocol].recommendedFrequency}</span>
+              <div className="p-3 bg-[#f8faf7] border border-[#d6dfd4] rounded-lg text-xs text-[#26372d] flex items-center justify-between">
+                <span className="font-bold text-[#1e4830]">Recommended Frequency:</span>
+                <span className="text-[#526458]">{protocols[activeProtocol].recommendedFrequency}</span>
               </div>
 
             </div>
 
-            <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between">
-              <span className="text-xs text-[#a3a39e]">
+            <div className="pt-6 mt-6 border-t border-[#edf2ec] flex flex-col sm:flex-row items-center justify-between gap-4">
+              <span className="text-xs text-[#526458]">
                 Performed in Bahir Dar by certified hair practitioners
               </span>
               <button
                 onClick={() => onOpenBooking('salon', 'hair-treat-steam')}
-                className="px-6 py-2.5 text-xs font-bold uppercase tracking-[0.15em] text-[#050505] bg-[#d4af37] hover:bg-[#e5c358] shadow-lg cursor-pointer"
+                className="w-full sm:w-auto px-6 py-2.5 text-xs font-bold uppercase tracking-[0.15em] text-[#050505] bg-[#d4af37] hover:bg-[#e5c358] shadow-md rounded-lg cursor-pointer"
               >
                 Book This Protocol
               </button>
@@ -236,12 +233,12 @@ export const HairGrowthTherapies: React.FC<HairGrowthTherapiesProps> = ({ onOpen
         </div>
 
         {/* 4-Week Rebirth Timeline */}
-        <div className="mt-8 p-6 sm:p-8 bg-[#0e0e10] border border-white/10">
+        <div className="mt-8 p-6 sm:p-8 bg-white border border-[#dce5db] shadow-md rounded-2xl">
           <div className="text-center max-w-2xl mx-auto mb-8 space-y-1">
-            <h4 className="font-serif-luxury text-xl font-bold text-[#f5f5f0]">
+            <h4 className="font-serif-luxury text-xl font-bold text-[#18261e]">
               Our Signature 4-Week Crown Restoration Journey
             </h4>
-            <p className="text-xs text-[#a3a39e] font-light">
+            <p className="text-xs text-[#526458]">
               A structured transformation system tailored for clients recovering from breakage and post-braid stress.
             </p>
           </div>
@@ -250,16 +247,16 @@ export const HairGrowthTherapies: React.FC<HairGrowthTherapiesProps> = ({ onOpen
             {timelineSteps.map((step, idx) => (
               <div 
                 key={idx} 
-                className="p-4 bg-[#141416] border border-white/10 space-y-2 relative"
+                className="p-4 bg-[#f8faf7] border border-[#e2ece0] rounded-xl space-y-2 relative shadow-2xs"
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold text-[#d4af37] px-2 py-0.5 bg-[#d4af37]/15">
+                  <span className="text-xs font-bold text-[#1e4830] px-2.5 py-0.5 bg-[#e4ede3] rounded-md">
                     {step.week}
                   </span>
-                  <span className="text-[10px] text-[#71716e] uppercase">Phase 0{idx + 1}</span>
+                  <span className="text-[10px] text-[#718579] uppercase font-semibold">Phase 0{idx + 1}</span>
                 </div>
-                <h5 className="text-sm font-bold text-[#f5f5f0]">{step.title}</h5>
-                <p className="text-xs text-[#a3a39e] leading-relaxed font-light">{step.detail}</p>
+                <h5 className="text-sm font-bold text-[#18261e]">{step.title}</h5>
+                <p className="text-xs text-[#526458] leading-relaxed">{step.detail}</p>
               </div>
             ))}
           </div>
