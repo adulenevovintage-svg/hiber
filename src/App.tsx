@@ -17,7 +17,6 @@ import { ContactLocationSection } from './components/ContactLocationSection';
 import { Footer } from './components/Footer';
 import { BookingModal } from './components/BookingModal';
 import { NaturalHairQuizModal } from './components/NaturalHairQuizModal';
-import { SideProgress } from './components/SideProgress';
 import { Phone, MessageSquare, ArrowUp } from 'lucide-react';
 import { BRAND_INFO } from './data/salonData';
 import { ServiceItem, AcademyCourse, PackageDeal } from './types';
@@ -80,9 +79,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#fcfaf7] text-[#18181b] font-sans antialiased selection:bg-[#d4af37]/30 selection:text-[#18181b]">
-      {/* Side Progress Section Indicator */}
-      <SideProgress />
-
       {/* Navigation Bar */}
       <Navbar 
         onOpenBooking={handleOpenBooking}
